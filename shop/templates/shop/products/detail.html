@@ -1,5 +1,6 @@
 {% extends "shop/base.html" %}
 {% load static %}
+
 {% block title %}
   {{ product.name }}
 {% endblock %}
@@ -15,11 +16,6 @@
       </a>
     </h2>
     <p class="price">${{ product.price }}</p>
-    <form action="" method="post">
-      {{ cart_product_form }}
-      {% csrf_token %}
-      <input class="btn" type="submit" value="Add to cart">
-    </form>
     {{ product.description|linebreaks }}
   </div>
 {% endblock %}

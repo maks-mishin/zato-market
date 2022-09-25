@@ -18,6 +18,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    # get_absolute_url() is the convention to retrieve the
+    # URL for a given object
     def get_absolute_url(self):
         return reverse('shop:product_list_by_category',
                        args=[self.slug])
